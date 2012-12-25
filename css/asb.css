@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body {
+	background-image: url(../images/backgrounds/gplaygreen.png);
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.buffer {
+	overflow: auto;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, .8);
+	-webkit-border-radius: 0 0 8px 8px;
+	-moz-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+	margin-bottom: 75px;
+}
+
+.buf-top {
+	margin-top: 20px;
+}
+
+.buff-top-bottom {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.carousel-image {
+	margin-left: auto;
+	margin-right: auto;
+}
+.carousel-image {
+	width: 400px;
+	height: 300px;
+}
+.center-div {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.foot-buffer {
+	padding: 2px;
+}
+
+.foot-buffer.pull-left {
+	text-align: left;
+}
+
+.hidden {
+	display: none;
+}
+
+.media-button {
+	margin-left: 20px;
+}
+
+.navbar {
+	margin: 0;
+	margin-top: -3px;
+	width: 100%;
+	float: left;
+	border-radius: 8px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.pic-column {
+	max-width: 200px;
+	width: 200px;
+	padding-right: 20px;
+	text-align: center;
+}
+
+.question {
+	cursor: pointer;
+}
+
+.site-table {
+	margin: 5px 0 20px 0;
+	background-color: rgba(51,204,204,.55);
+}
+.site-table td {
+	border: 2px solid white;
+	padding: 10px;
+}
+.site-table-header td {
+	border:0px;
+	padding-left: 150px;
+	background-color: transparent;
+}
+.site-table-header {
+	border: 2px solid white;
+}
+
+.slideshow {
+	padding-left: 70px;
+}
+.slideshow img {
+	margin: auto;
+	float: none;
+}
+
+.video-div {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#banner {
+	background-image: url(../images/backgrounds/gplaygreen.png);
+	float: left;
+	padding-top: 8px;
+}
+
+#exec-bios dd {
+	color: #08c;
+	cursor:pointer;
+	padding-left: 5px;
+	border-radius: 5px;
+	width: 160px;
+}
+
+#foot {
+	position: relative;
+	padding: 0px;
+	background-color: #2C2C2C;
+	color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#head, #banner, #main-div {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+#main-div {
+	overflow: auto;
+}
+
+#leaders-table h3 {
+	line-height: 22px;
+}
+
+#leaders-table tr td {
+	padding: 10px;
+}
+
+#map-canvas {
+	margin-top: 20px;
+}
+
+#media-buttons {
+	margin-top: 20px;
+}
+
+#prewww-arrow {
+	position: absolute;
+	width: 160px;
+ color:
+}
+
+#site-info-container {
+	background-color: red;
+	margin-top: 20px; 
+	width: 210px; 
+	height: 600px; 
+	float: left;
+}
+
+#title {
+	float: left;
+	font-size: 72px;
+	font-weight:900;
+	line-height: 85%;
+}
+
+#welcome-carousel {
+	margin-left: auto;
+	margin-right: auto;
+	width: 550px;
+	height: 300px;
+}
+
+#wrapper {
+	min-height: 100%;
+}
+
