@@ -36,10 +36,11 @@
 
 window.onload = function () {
     var paper = Raphael("map-canvas", 940, 560);
+    var states = {};
 
     //Draw Map
     for (var state in usMap) {
-        paper.path(usMap[state]).attr({
+        states[state] = paper.path(usMap[state]).attr({
 	    	"fill": "#33cccc",
 			"opacity": ".8",
 	    	"stroke": "#fff",
@@ -48,14 +49,21 @@ window.onload = function () {
 	    	"stroke-miterlimit": "4",
 	    	"stroke-width": "0.75",
 	    	"stroke-dasharray": "none"
-	    });      
+	    });
+
+
     }
 	 
 	// Draw the Map!
 	drawMap();
 
+	function fadeMap() {
+		for (var state in states){
+			states[state].animate({"opacity": "0"}, 2000 * Math.random());
+		}
+	}
 	function drawMap () {
-		var siteClasses = {};		// We will store all the CSS classes here
+		
 
 		// Grab the trip name from the label
 		tripName = $('#trip').text().replace(/[^0-9A-Za-z]/g,'-')
@@ -66,7 +74,7 @@ window.onload = function () {
 			var cityY = cities[city]['y'];
 			
 			var cityName = tripName + '_' + city.replace(/[^0-9A-Za-z]/g,'-');
-			siteClasses[city] = cityName;		
+	
 
 			var cityMarker = paper.circle(cityX, cityY, 5).attr({
 				"stroke-width": "1",
@@ -75,6 +83,7 @@ window.onload = function () {
 
 			cityMarker.click(function () {
 				$('.info-' + this.id).toggle();
+				fadeMap();
 			});
 			
 			// Create labels and divs for each site
