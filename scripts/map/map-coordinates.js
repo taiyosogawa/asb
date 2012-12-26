@@ -64,37 +64,37 @@ var cities = {
 	
 	// Evanston, IL
 
-	evanston: {
+	Evanston: {
 		x: 615,
 		y: 208
 	},
 	
 	// Lexington, KY
-	lexington: {
+	Lexington: {
 		x: 680,
 		y: 290
 	},
 
 	// Madison, WI
-	madison: {
+	Madison: {
 		x: 590,
 		y: 182
 	},
 	
 	// Nashville, TN
-	nashville: {
+	Nashville: {
 		x: 655,
 		y: 333
 	},
 	
 	// Pittsburgh, PA
-	pittsburgh: {
+	Pittsburgh: {
 		x: 750,
 		y: 223
 	},
 		
 	// St. Louis, MO
-	stlouis: {
+	StLouis: {
 		x: 580,
 		y: 285
 	}
@@ -102,27 +102,27 @@ var cities = {
 
 var records = {
 	'Pre-WWW-2012': {
-		'pittsburgh': [
+		'Pittsburgh': [
 			'Pace School',
 			'Tree Pittsburgh'
 		],
 		
-		'madison': [
+		'Madison': [
 			'Community GroundWorks',
 			'Middle Outreach Ministry & Habitat for Humanity'
 		],
 		
-		'lexington': [
+		'Lexington': [
 			'Community Action Council',
 			'The Nest'
 		],
 		
-		'nashville': [
+		'Nashville': [
 			'Monroe Harding Home',
 			'Second Harvest Food Bank'
 		],
 		
-		'stlouis': [
+		'StLouis': [
 			'Our Lady\'s Inn',
 			'Kingdom House'
 		]
