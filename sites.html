@@ -14,7 +14,14 @@
 <div id="wrapper">
    <div id="main-div">
       <div class="buffer">
-         <h1>Sites</h1>
+      	<div>
+      		<div>
+		        <h1>Sites</h1>
+		        <h4 id="trip">Pre-WWW 2012</h4>
+	    	</div>
+	        <img id="map-icon" width="15%" src="images/map.png">
+        </div>
+         
          <div id="map-canvas" style="float: left;">
          	<!--Raphael graphics go here-->
          </div>
@@ -31,6 +38,166 @@
 <script type="text/javascript" src="scripts/asb.js"></script>
 <script type="text/javascript" src="scripts/map/raphael-min.js"></script>
 <script type="text/javascript" src="scripts/map/map-coordinates.js"></script>
-<script type="text/javascript" src="scripts/map/map-drawer.js"></script>
+<script type="text/javascript">
+
+// Time for map to fade in milliseconds
+var FADE_TIME = 1500;
+// Time for elements to show in milliseconds
+var SHOW_TIME = 1000;
+
+window.onload = function () {
+
+
+    var paper = Raphael("map-canvas", 940, 560);
+
+    // stateOutlines is a set of all the states on the map
+    var stateOutlines = {};
+
+    // cityMarkers is a set of all the cities on the map
+    var cityMarkers = {};
+
+	// Draw the Map!
+	drawMap();
+
+	$('#site-info-container').prepend('<dl>');
+	$('#site-info-container').append('</dl>');
+
+
+	function drawMap() {
+		drawStateOutlines();
+		drawLabels();
+		drawEvanston();
+
+		// Initialize the icon
+		$('#map-icon').hide();
+		$('#map-icon').click(function () {
+			$(this).fadeOut(FADE_TIME);
+			showMap();
+		});
+	}
+
+	function drawStateOutlines() {
+	    for (var state in usMap) {
+	        stateOutlines[state] = paper.path(usMap[state]).attr({
+		    	"fill": "#33cccc",
+				"opacity": ".8",
+		    	"stroke": "#fff",
+		    	"stroke-opacity": "1",
+		    	"stroke-linejoin": "round",
+		    	"stroke-miterlimit": "4",
+		    	"stroke-width": "0.75",
+		    	"stroke-dasharray": "none"
+		    });
+	    }
+	}
+
+	function drawLabels() {
+		// Grab the trip name from the label
+		tripName = replaceWithDashes($('#trip').text());
+		trip = records[tripName];
+		
+		for (var city in trip) {
+			var cityX = cities[city]['x'];
+			var cityY = cities[city]['y'];
+			
+			var cityName = tripName + '_' + replaceWithDashes(city);
+
+			var cityMarker = paper.circle(cityX, cityY, 6).attr({
+				"stroke-width": "1",
+				"fill": "#a00",
+				"cursor": "pointer"
+			});
+
+			cityMarkers[city] = cityMarker;
+
+			// add cityMarker functionality here
+			cityMarker.click(function () {
+				$('.info-' + this.id).css("font-weight", "bold");
+				fadeMap();
+			});
+
+			cityMarker.hover(function () {
+					this.attr({
+						"fill": "#0a0",
+						"stroke-width": "1.5"
+					});
+					$('.info-' + this.id).css("font-weight", "bold");
+				}, function () {
+					this.attr({
+						"fill": "#a00",
+						"stroke-width": "1"
+				});
+				$('.info-' + this.id).css("font-weight", "normal");
+			});
+			
+			// Create labels and divs for each site
+			$('#site-info-container').append('<br /><dt class="site-info">' + city + '</dt>');
+			for (var site in trip[city]) {
+				var Site = trip[city][site];
+				var siteId = replaceWithDashes(Site) + '-' + cityMarker.id;
+				
+				$('#site-info-container').append('<dd id="' + siteId + '" class="site-info info-' + cityMarker.id +'">' + Site + '</dd>');
+				
+				
+				paper.text(cityX + 10, cityY - 20, trip[city][site]).attr({
+					'text-anchor': 'start'
+				});
+				cityY += 12;
+			}
+		}
+	}
+
+	function drawEvanston() {
+		cityMarkers['Evanston'] = paper.circle(cities['Evanston']['x'], cities['Evanston']['y'], 8).attr({
+				"stroke-width": "2",
+				"fill": "#a0a"
+		});
+	}
+
+	function fadeMap() {
+		fadeStateOutlines();
+		fadeCityMarkers();
+		setTimeout(function () {
+			$('#map-icon').fadeIn(SHOW_TIME);
+		}, FADE_TIME);
+	}
+
+	function showMap() {
+		showStateOutlines();
+		showCityMarkers();
+	}
+
+	function fadeStateOutlines() {
+		for (var state in stateOutlines){
+			stateOutlines[state].animate({"opacity": "0"}, FADE_TIME * Math.random());
+		}
+	}
+
+	function fadeCityMarkers() {
+		for (var city in cityMarkers){
+			cityMarkers[city].animate({"opacity": "0"}, FADE_TIME * Math.random());
+		}
+	}
+
+	function showStateOutlines() {
+		for (var state in stateOutlines){
+			stateOutlines[state].animate({"opacity": ".8"}, SHOW_TIME);
+		}
+	}
+
+	function showCityMarkers() {
+		for (var city in cityMarkers){
+			cityMarkers[city].animate({"opacity": ".8"}, SHOW_TIME);
+		}
+	}
+
+	function replaceWithDashes(string) {
+		return string.replace(/[^0-9A-Za-z]/g,'-');
+	}
+}
+
+
+
+</script>
 </body>
 </html>

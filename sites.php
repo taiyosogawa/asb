@@ -46,6 +46,10 @@ window.onload = function () {
 	// Draw the Map!
 	drawMap();
 
+	$('#site-info-container').prepend('<dl>');
+	$('#site-info-container').append('</dl>');
+
+
 	function drawMap() {
 		drawStateOutlines();
 		drawLabels();
@@ -109,53 +113,53 @@ window.onload = function () {
 			});
 			
 			// Create labels and divs for each site
-			$('#site-info-container').append('<br /><dt class="site-info info-' + cityMarker.id +'">' + city + '</dt>');
+			$('#site-info-container').append('<br /><dt class="site-info">' + city + '</dt>');
 			for (var site in trip[city]) {
 				var Site = trip[city][site];
 				var siteId = replaceWithDashes(Site) + '-' + cityMarker.id;
 				
 				$('#site-info-container').append('<dd id="' + siteId + '" class="site-info info-' + cityMarker.id +'">' + Site + '</dd>');
 				
+				
 				paper.text(cityX + 10, cityY - 20, trip[city][site]).attr({
 					'text-anchor': 'start'
 				});
 				cityY += 12;
+
 			}
 		}
 	}
 
-	$('#site-info-container').prepend('<dl>');
-	$('#site-info-container').append('</dl>');
+	function drawEvanston() {
+		cityMarkers['Evanston'] = paper.circle(cities['Evanston']['x'], cities['Evanston']['y'], 8).attr({
+				"stroke-width": "2",
+				"fill": "#a0a"
+		});
+	}
 
-}
+	function fadeMap() {
+		fadeStateOutlines();
+		fadeCityMarkers();
+	}
 
-function drawEvanston() {
-	cityMarkers['evanston'] = paper.circle(cities['evanston']['x'], cities['evanston']['y'], 8).attr({
-			"stroke-width": "2",
-			"fill": "#a0a"
-	});
-}
+	function fadeStateOutlines() {
+		for (var state in stateOutlines){
+			stateOutlines[state].animate({"opacity": "0"}, 1800 * Math.random());
+		}
+	}
 
-function fadeMap() {
-	fadeStateOutlines();
-	fadeCityMarkers();
-}
+	function fadeCityMarkers() {
+		for (var city in cityMarkers){
+			cityMarkers[city].animate({"opacity": "0"}, 1800 * Math.random());
+		}
+	}
 
-function fadeStateOutlines() {
-	for (var state in stateOutlines){
-		stateOutlines[state].animate({"opacity": "0"}, 1800 * Math.random());
+	function replaceWithDashes(string) {
+		return string.replace(/[^0-9A-Za-z]/g,'-');
 	}
 }
 
-function fadeCityMarkers() {
-	for (var city in cityMarkers){
-		cityMarkers[city].animate({"opacity": "0"}, 1800 * Math.random());
-	}
-}
 
-function replaceWithDashes(string) {
-	return string.replace(/[^0-9A-Za-z]/g,'-');
-}
 
 </script>
 </body>
