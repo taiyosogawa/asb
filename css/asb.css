@@ -82,6 +82,19 @@ html, body {
 	cursor: pointer;
 }
 
+.site-list-city {
+	cursor: pointer;
+	padding: 6px;
+	margin: 9px 0 9px 0;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0);
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+}
+
 .site-table {
 	margin: 5px 0 20px 0;
 	background-color: rgba(51,204,204,.55);

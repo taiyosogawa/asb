@@ -139,24 +139,30 @@ window.onload = function () {
 						"fill": "#0a0",
 						"stroke-width": "1.5"
 					});
-					$('.site-list-item.city-' + this.id).css("font-weight", "bold");
+					$('.site-list-city.city-' + this.id).css({
+						'background': 'rgba(51, 204, 204, .3)',
+						'border-color': 'rgba(51, 204, 204, .55)'
+					});
 				}, function () {
 					this.attr({
 						"fill": "#a00",
 						"stroke-width": "1"
 				});
-				$('.site-list-item.city-' + this.id).css("font-weight", "normal");
+				$('.site-list-city.city-' + this.id).css({
+					'background': 'rgba(0, 0, 0, 0)',
+					'border-color': 'rgba(0, 0, 0, 0)'
+				});
 			});
 			
 			// Create side label for each city
-			$('#site-list').append('<br /><dt class="site-list-item">' + city + '</dt>');
+			$('#site-list').append('<div class="site-list-city city-' + cityMarker.id + '"><dt>' + city + '</dt></div>');
 			addTableWrapper(city, 'city-' + cityMarker.id);
 
 			// Create a label for each site
 			for (var site in trip[city]) {
 				var Site = trip[city][site];
 				
-				$('#site-list').append('<dd class="site-list-item city-' + cityMarker.id +'">' + Site + '</dd>');
+				$('.site-list-city.city-' + cityMarker.id).append('<dd class="site-list-item city-' + cityMarker.id +'">' + Site + '</dd>');
 				addTableRow(Site, 'city-' + cityMarker.id);
 
 				siteLabels.push(paper.text(cityX + 10, cityY - 20, trip[city][site]).attr({
@@ -201,8 +207,6 @@ window.onload = function () {
 			array[element].animate({"opacity": ".8"}, SHOW_TIME * Math.random());
 		}
 	}
-
-
 
 	function addTableWrapper(city, cityClass) {
 		$('#map-canvas').append('<table class="site-table ' + cityClass + '"><tr class="site-table-header"><td></td><td><h3>' + city + '</h3></td></tr></table>');
