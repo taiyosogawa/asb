@@ -107,9 +107,15 @@ var records = {
 			'Tree Pittsburgh'
 		],
 		
+
 		'Madison': [
 			'Community GroundWorks',
-			'Middle Outreach Ministry & Habitat for Humanity'
+			'Middleton Outreach Ministry and Habitat for Humanity'
+		],
+
+		'Nashville': [
+			'Monroe Harding Home',
+			'Second Harvest Food Bank'
 		],
 		
 		'Lexington': [
@@ -117,16 +123,152 @@ var records = {
 			'The Nest'
 		],
 		
-		'Nashville': [
-			'Monroe Harding Home',
-			'Second Harvest Food Bank'
-		],
+		
 		
 		'StLouis': [
 			'Our Lady\'s Inn',
 			'Kingdom House'
 		]
+		
 	}
-	
 }
 
+var sites = {
+	'Community Action Council': {
+		'city': 'Lexington',
+		'state': 'Kentucky',
+		'site-description': 'Community Action Council for Lexington-Fayette, Bourbon, Harrison and Nicholas Counties is a \
+			private, non-profit organization founded in 1965 to study the causes and effects of poverty in our communities and \
+			work toward solutions. The Council combats poverty by offering opportunities for low-income people to achieve \
+			self-sufficiency and providing services so that each community member and family is able to reach their full potential. \
+			Council works to serve the low income population through advocacy, service delivery and community involvement.',
+		'activity-description': 'On this ASB trip, participants will be working on a variety of CAC programs from working in \
+			classrooms, to sorting and distributing food, to helping with light construction projects at both their urban \
+			neighborhood and rural community centers.',
+		'url': 'http://www.commaction.org/',
+		'image': 'images/sites/commaction.jpg'
+	},
+
+	'Community GroundWorks': {
+		'city': 'Madison',
+		'state': 'Wisconsin',
+		'site-description': 'Community GroundWorks is a nonprofit organization in Madison, WI that focuses on community education \
+			through gardening, urban farming, healthy eating and natural areas restoration. Overall, the organization manages 26 \
+			acres for the food production and restoration.',
+		'activity-description': 'Participants will work on a variety of projects ranging from trail maintenance, tree pruning and \
+		organic gardening to bean shelling, invasive species removal and nutrition education.',
+		'url': 'http://www.troygardens.org/',
+		'image': 'images/sites/cgw.jpeg'
+	},
+
+	'Kingdom House': {
+		'city': 'St. Louis',
+		'state': 'Missouri',
+		'site-description': 'Kingdom House has been transforming the lives of individuals in St. Louis since 1902. Through a variety \
+			of services, childcare, food & clothing assistance, job training, youth and teen program and Senior Companions, Kingdom \
+			House helps thousands yearly achieve self-sufficiency and gain economic independence.',
+		'activity-description': 'Volunteer opportunities may include tutoring, mentoring, stocking the food pantry, working at the \
+		thrift shop, watching young ones at the day care, and participating in the gardening program.',
+		'url': 'http://www.kingdomhouse.org/',
+		'image': 'images/sites/kingdomhouse.jpg'
+	},
+
+	'Middleton Outreach Ministry and Habitat for Humanity': {
+		'city': 'Madison',
+		'state': 'Wisconsin',
+		'site-description': 'MOM is a non-profit that is leading a community-wide effort to prevent homelessness and end hunger for \
+			people throughout Middleton, West Madison and Cross Plains.  Through the support of business partners, area schools and \
+			faith communities, as well as numerous individuals and service organizations, MOM provides - free of charge - food, clothing, \
+			housing assistance, emergency financial assistance, and special services for seniors.  Habitat for Humanity is a nonprofit, \
+			organization dedicated to eliminating substandard housing. Habitat is founded on the conviction that every person should have \
+			a simple, decent, affordable place to live in dignity and safety.   On this trip, participants will have the opportunity to \
+			spend half their week volunteering with MOM and the other half volunteering with Habitat for Humanity.',
+		'activity-description': 'At MOM participants will assist the organization by working in their food pantry and with their other \
+			food distribution services. Additionally, they will have an opportunity to work in the senior service sector of their \
+			homelessness program. With Habitat, participants will assist in the completion process for one of the homes. Volunteer work \
+			will consist of painting, insulation, cabinetry, landscaping, and other home repair tasks.',
+		'url': 'http://www.momhelps.org/',
+		'image': 'images/sites/mom.jpg'
+	},
+
+	'Monroe Harding Home': {
+		'city': 'Nashville',
+		'state': 'Tennessee',
+		'site-description': 'Starting as a Presbyterian Orphanage in Nashville, TN in 1893, Monroe Harding Home has now expanded their \
+			programs to meet the modern-day needs of children and youth in state’s custody. Beyond the basics of food, clothing, and \
+			shelter, Monroe Harding also provides mentoring, safety and structure, relationship-building skills, spiritual formation, \
+			life skills training, education, and job placement.',
+		'activity-description': 'On this trip, participants can expect to interact with the residents of Monroe Harding on a daily \
+			basis as well as engage in various chores around the orphanage.',
+		'url': 'http://www.monroeharding.org/',
+		'image': 'images/sites/monroeharding.jpg'
+	},
+
+	'The Nest': {
+		'city': 'Lexington',
+		'state': 'Kentucky',
+		'site-description': 'The Nest—Center for Women, Children and Families is an organization that provides high quality, \
+			comprehensive services to women and families in crisis while working to prevent child abuse and neglect. The offers \
+			resources for families to develop the skills and habits needed for a healthier lifestyle.  These resources include \
+			child care, counseling services, parenting classes and crisis case management.  On this ASB trip, participants will \
+			have the opportunity to work with both women and children in the center.',
+		'activity-description': 'Work may include assisting in the childcare classrooms, helping sort and distribute clothing, \
+			toiletries, food etc, and a variety of other tasks associated with the maintenance of the organization and the \
+			counseling, parenting, and childcare components of their programming.',
+		'url': 'http://www.thenestlexington.org/',
+		'image': 'images/sites/thenest.JPG'
+	},
+
+	'Our Lady\'s Inn': {
+		'city': 'St. Louis',
+		'state': 'Missouri',
+		'site-description': 'Our Lady’s Inn provides pregnant women and their children shelter and hope for a new life. Since 1982, \
+			this site has served as a life-affirming alternative to abortion for more than 5,000 women who have chosen life for their \
+			unborn babies. For more than 30 years these families have been sheltered and supported in their efforts to live healthy \
+			and productive lives, attain educational goals, gain employment and secure stable housing.',
+		'activity-description': 'Volunteer responsibilities at this site may include childcare, meal preparation, working at the \
+			resale shop, and maintenance work both at the St. Louis and St. Charles sites.',
+		'url': 'http://www.ourladysinn.org/',
+		'image': 'images/sites/ourladys.jpg'
+	},
+
+	'Pace School': {
+		'city': 'Pittsburgh',
+		'state': 'Pennsylvania',
+		'site-description': 'The Pace School is a private, nonprofit day school located outside of Pittsburgh, \
+			Pennsylvania serving hard-to-teach, hard-to-reach children and adolescents in grades K-9. It provides \
+			educational and therapeutic services for students with learning disabilities and has most recently begun \
+			to focus its attention on students with emotional and behavioral disorders. On this ASB trip, participants \
+			will work one-on-one with students inside and outside the classroom, and have the opportunity to work \
+			directly with teachers as aides.',
+		'activity-description': 'Participants will help with everything from tutoring students in math and science \
+			to leading activities like kickball and gymnastics inside the school\'s gymnasium.',
+		'url': 'http://www.paceschool.org/',
+		'image': 'images/sites/pace.jpg'
+	},
+
+	'Second Harvest Food Bank': {
+		'city': 'Nashville',
+		'state': 'Tennessee',
+		'site-description': 'Second Harvest Food Bank of Middle Tennessee is one of the largest and most comprehensive \
+			of over 200 food banks and food distribution centers nationwide. During the 2009-2010 fiscal year, Second \
+			Harvest distributed more than 53.3 million pounds of food to hungry men, women, and children.',
+		'activity-description': 'Participants on this trip can expect to learn about the local food and nutrition needs \
+			of the community through assisting in food donation collection, sorting, and distribution.',
+		'url': 'http://secondharvestmidtn.org/',
+		'image': 'images/sites/middleharvest.jpg'
+	},
+
+	'Tree Pittsburgh': {
+		'city': 'Pittsburgh',
+		'state': 'Pennsylvania',
+		'site-description': 'Tree Pittsburgh is an environmental non-profit dedicated to engaging citizens to maintain, \
+		plant, and protect trees in the city’s urban forest. Pittsburgh "Tree Tenders" are the national guard of the arborist \
+		world: a civilian group taking care of what the pros can\'t quite get to.',
+		'activity-description': 'On this trip, participants will do gardening and landscaping at a different site in Pittsburgh \
+		every day, allowing them to work outside and see all the Pittsburgh has to offer!',
+		'url': 'http://treepittsburgh.org/',
+		'image': 'images/sites/treepittsburgh.jpg'
+	}
+
+};

@@ -143,8 +143,9 @@ html, body {
 }
 
 #map-icon {
+	height: 80px;
 	float: right; 
-	margin-right: 50px;
+	margin-right: 80px;
 	cursor: pointer;
 	display: none;
 }
@@ -171,14 +172,10 @@ html, body {
  color:
 }
 
-#site-info-container {
+#site-list-container {
 	width: 210px; 
 	height: 600px; 
 	float: left;
-}
-
-#site-info-list {
-	margin-top: 0;
 }
 
 #title {
