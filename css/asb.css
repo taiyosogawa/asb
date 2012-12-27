@@ -142,10 +142,15 @@ html, body {
 	overflow: auto;
 }
 
+#map-canvas {
+	max-width: 940px;
+}
+
 #map-icon {
 	float: right; 
 	padding-right: 30px;
 	cursor: pointer;
+	display: none;
 }
 
 #main-div {
@@ -158,10 +163,6 @@ html, body {
 
 #leaders-table tr td {
 	padding: 10px;
-}
-
-#map-canvas {
-	margin-top: 20px;
 }
 
 #media-buttons {
