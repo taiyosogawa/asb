@@ -106,8 +106,7 @@ var records = {
 			'Pace School',
 			'Tree Pittsburgh'
 		],
-		
-
+	
 		'Madison': [
 			'Community GroundWorks',
 			'Middleton Outreach Ministry and Habitat for Humanity'
@@ -123,13 +122,10 @@ var records = {
 			'The Nest'
 		],
 		
-		
-		
 		'StLouis': [
 			'Our Lady\'s Inn',
 			'Kingdom House'
 		]
-		
 	}
 }
 

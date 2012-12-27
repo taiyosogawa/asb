@@ -26,7 +26,7 @@
 		        <h1>Sites</h1>
 		        <h4 id="trip">Pre-WWW 2012</h4>
 	    	</div>
-	        <img id="map-icon" src="images/map.png">
+	        <img id="map-icon" src="images/small-map.png">
         </div>
          
          <div id="map-canvas" style="float: left; width: 940px; height: 560px;">
@@ -210,11 +210,8 @@ window.onload = function () {
 
 	function addTableRow(site, cityClass) {
 		var Site = sites[site];
-
-
-		alert(Site['image']);
 	
-		var tableRow = '<tr><td class="pic-column"><img src="" ></td><td ><h4>' + site + '</h4><br /> Our Lady’s Inn provides pregnant women and their children shelter and hope for a new life. Since 1982, this site has served as a life-affirming alternative to abortion for more than 5,000 women who have chosen life for their unborn babies. For more than 30 years these families have been sheltered and supported in their efforts to live healthy and productive lives, attain educational goals, gain employment and secure stable housing. <i>Volunteer responsibilities at this site may include childcare, meal preparation, working at the resale shop, and maintenance work both at the St. Louis and St. Charles sites.</i><br /><br /><a href="http://www.ourladysinn.org/">' + site + ' Website</a></td></tr>';
+		var tableRow = '<tr><td class="pic-column"><img src="' + Site['image'] + '" ></td><td ><h4>' + site + '</h4><br />' + Site['site-description'] + '<i>' + Site['activity-description'] + '</i><br /><br /><a href="' + Site['url'] + '">' + site + ' Website</a></td></tr>';
 		$('table.' + cityClass).append(tableRow);
 	}
 
