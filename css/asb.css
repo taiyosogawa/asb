@@ -142,13 +142,9 @@ html, body {
 	overflow: auto;
 }
 
-#map-canvas {
-	max-width: 940px;
-}
-
 #map-icon {
 	float: right; 
-	padding-right: 30px;
+	margin-right: 50px;
 	cursor: pointer;
 	display: none;
 }
@@ -176,10 +172,13 @@ html, body {
 }
 
 #site-info-container {
-	margin-top: 60px; 
 	width: 210px; 
 	height: 600px; 
 	float: left;
+}
+
+#site-info-list {
+	margin-top: 0;
 }
 
 #title {

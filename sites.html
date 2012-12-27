@@ -9,6 +9,8 @@
 <style type="text/css">
 	.site-table{
 		display: none;
+		width: 880px;
+		margin: 20px 0 0 30px;
 	}
 </style>
 <title>ASB Sites</title>
@@ -19,12 +21,12 @@
 <div id="wrapper">
    <div id="main-div">
       <div class="buffer">
-      	<div style="min-height: 80px;">
+      	<div style="min-height: 100px;">
       		<div class="span6">
 		        <h1>Sites</h1>
 		        <h4 id="trip">Pre-WWW 2012</h4>
 	    	</div>
-	        <img id="map-icon" height="80px" src="images/map.png">
+	        <img id="map-icon" height="100px" src="images/map.png">
         </div>
          
          <div id="map-canvas" style="float: left; width: 940px; height: 560px;">
@@ -35,6 +37,9 @@
                  <td></td>
                  <td><h3>Pittsburgh, PA</h3></td>
               </tr>
+
+
+
               <tr>
                  <td class="pic-column"><img src="images/sites/treepittsburgh.jpg" ></td>
                  <td ><h4>Tree Pittsburgh</h4>
@@ -52,6 +57,10 @@
                     <a href="http://www.paceschool.org/">Pace School Website</a></td>
               </tr>
            </table>
+
+
+
+
            <table class="site-table">
               <tr class="site-table-header">
                  <td></td>
@@ -119,11 +128,37 @@
                     <a href="http://secondharvestmidtn.org/">Second Harvest Website</a></td>
               </tr>
            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
            <table class="site-table">
               <tr class="site-table-header">
                  <td></td>
                  <td><h3>St. Louis, MO</h3></td>
               </tr>
+
+
+
+
               <tr>
                  <td class="pic-column"><img src="images/sites/ourladys.jpg" ></td>
                  <td ><h4>Our Lady's Inn</h4>
@@ -132,6 +167,8 @@
                     <br />
                     <a href="http://www.ourladysinn.org/">Our Lady's Innn Website</a></td>
               </tr>
+
+
               <tr>
                  <td class="pic-column"><img src="images/sites/kingdomhouse.jpg" ></td>
                  <td ><h4>Kingdom House</h4>
@@ -140,10 +177,18 @@
                     <br />
                     <a href="http://www.kingdomhouse.org/">Kingdom House Website</a></td>
               </tr>
+
+
+
            </table>
+
+
+
 
          </div>
          <div id="site-info-container">
+         	<dl id="site-info-list">
+         	</dl>
          </div>
          </div>
    </div>
@@ -159,9 +204,11 @@
 <script type="text/javascript">
 
 // Time for map to fade in milliseconds
-var FADE_TIME = 1500;
+var FADE_TIME = 1200;
+// Accelerated fade time
+var FAST_FADE_TIME = 800;
 // Time for elements to show in milliseconds
-var SHOW_TIME = 1000;
+var SHOW_TIME = 800;
 
 window.onload = function () {
 
@@ -180,8 +227,6 @@ window.onload = function () {
 	// Draw the Map!
 	drawMap();
 
-	$('#site-info-container').prepend('<dl>');
-	$('#site-info-container').append('</dl>');
 
 
 	function drawMap() {
@@ -191,8 +236,12 @@ window.onload = function () {
 
 		// Initialize the icon
 		$('#map-icon').click(function () {
-			$(this).fadeOut(FADE_TIME);
-			showMap();
+			$(this).fadeOut(FAST_FADE_TIME);
+			$('.site-table').fadeOut(FAST_FADE_TIME);
+			setTimeout(function () {
+				showMap();
+			}, FAST_FADE_TIME);
+			
 		});
 	}
 
@@ -208,7 +257,6 @@ window.onload = function () {
 		    	"stroke-width": "0.75",
 		    	"stroke-dasharray": "none",
 		    });
-		    stateOutlines[state].node.setAttribute("class", "map-element");
 	    }
 	}
 
@@ -234,11 +282,9 @@ window.onload = function () {
 			// add cityMarker functionality here
 			cityMarker.click(function () {
 				fadeMap();
-				
 				// reveal the information about that city
 				var siteClass = '.info-' + this.id;
 				setTimeout(function () {
-					$('svg').hide();
 					$('#map-icon').fadeIn(SHOW_TIME);
 					$('.site-table' + siteClass).fadeIn(SHOW_TIME);
 				}, FADE_TIME);
@@ -258,23 +304,26 @@ window.onload = function () {
 				$('.info-' + this.id).css("font-weight", "normal");
 			});
 			
-			// Create labels and divs for each site
-			$('#site-info-container').append('<br /><dt class="site-info">' + city + '</dt>');
+			// Create side label for each city
+			$('#site-info-list').append('<br /><dt class="site-info">' + city + '</dt>');
+			addTableHeader(city, 'info-' + cityMarker.id);
+
+			// Create a label for each site
 			for (var site in trip[city]) {
 				var Site = trip[city][site];
 				var siteId = replaceWithDashes(Site) + '-' + cityMarker.id;
 				
-				$('#site-info-container').append('<dd id="' + siteId + '" class="site-info info-' + cityMarker.id +'">' + Site + '</dd>');
-				
-				
+				$('#site-info-list').append('<dd id="' + siteId + '" class="site-info info-' + cityMarker.id +'">' + Site + '</dd>');
+				addTableRow(Site, 'info-' + cityMarker.id);
+
 				siteLabels.push(paper.text(cityX + 10, cityY - 20, trip[city][site]).attr({
 					'text-anchor': 'start'
 				}));
 				cityY += 12;
 			}
+			//addTableFooter();
 		}
 	}
-
 
 	function drawEvanston() {
 		cityMarkers['Evanston'] = paper.circle(cities['Evanston']['x'], cities['Evanston']['y'], 8).attr({
@@ -287,30 +336,46 @@ window.onload = function () {
 		fadeElements(stateOutlines);
 		fadeElements(cityMarkers);
 		fadeElements(siteLabels);
+		setTimeout(function () {
+			$('svg').hide();
+		}, FADE_TIME);
 	}
 
 	function showMap() {
+		$('svg').show();
 		showElements(stateOutlines);
 		showElements(cityMarkers);
 		showElements(siteLabels);
 	}
 
 	function fadeElements(array) {
-
-		
 		for (var element in array){
-			array[element].animate({"opacity": "0"}, FADE_TIME * Math.random());
-			setTimeout(function () {
-				array[element].hide();
-			}, FADE_TIME);
+			array[element].animate({"opacity": "0"}, FADE_TIME * Math.random());	
 		}
 	}
 	
 	function showElements(array) {
 		for (var element in array){
-			array[element].show();
 			array[element].animate({"opacity": ".8"}, SHOW_TIME * Math.random());
 		}
+	}
+
+
+
+	function addTableHeader(city, cityClass) {
+		$('#map-canvas').append('<table class="site-table ' + cityClass + '"><tr class="site-table-header"><td></td><td><h3>' + city + '</h3></td></tr></table>');
+	}
+
+
+	
+	function addTableRow(site, cityClass) {
+		var tableRow = '<tr><td class="pic-column"><img src="prewww/images/sites/ourladys.jpg" ></td><td ><h4>' + site + '</h4><br /> Our Lady’s Inn provides pregnant women and their children shelter and hope for a new life. Since 1982, this site has served as a life-affirming alternative to abortion for more than 5,000 women who have chosen life for their unborn babies. For more than 30 years these families have been sheltered and supported in their efforts to live healthy and productive lives, attain educational goals, gain employment and secure stable housing. <i>Volunteer responsibilities at this site may include childcare, meal preparation, working at the resale shop, and maintenance work both at the St. Louis and St. Charles sites.</i><br /><br /><a href="http://www.ourladysinn.org/">' + site + ' Website</a></td></tr>';
+		$('table.' + cityClass).append(tableRow);
+	}
+
+
+	function addTableFooter() {
+		$('#map-canvas').append('</table>');
 	}
 
 	function replaceWithDashes(string) {
