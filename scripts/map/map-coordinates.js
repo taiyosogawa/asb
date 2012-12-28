@@ -94,7 +94,7 @@ var cities = {
 	},
 		
 	// St. Louis, MO
-	StLouis: {
+	'St. Louis': {
 		x: 580,
 		y: 285
 	}
@@ -102,27 +102,27 @@ var cities = {
 
 var records = {
 	'Pre-WWW-2012': {
-		'Pittsburgh': [
+		Pittsburgh: [
 			'Pace School',
 			'Tree Pittsburgh'
 		],
 	
-		'Madison': [
+		Madison: [
 			'Community GroundWorks',
 			'Middleton Outreach Ministry and Habitat for Humanity'
 		],
 
-		'Nashville': [
+		Nashville: [
 			'Monroe Harding Home',
 			'Second Harvest Food Bank'
 		],
 		
-		'Lexington': [
+		Lexington: [
 			'Community Action Council',
 			'The Nest'
 		],
 		
-		'StLouis': [
+		'St. Louis': [
 			'Our Lady\'s Inn',
 			'Kingdom House'
 		]

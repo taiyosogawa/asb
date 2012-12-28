@@ -42,7 +42,7 @@
 
 <!--Javascript--> 
 <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>-->
-<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script> 
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script> 
 <script type="text/javascript" src="scripts/asb.js"></script>
 <script type="text/javascript" src="scripts/map/raphael-min.js"></script>
@@ -72,6 +72,8 @@ window.onload = function () {
 
 	// Draw the Map!
 	drawMap();
+
+
 
 
 
@@ -134,28 +136,11 @@ window.onload = function () {
 				}, FADE_TIME);
 			});
 
-			cityMarker.hover(function () {
-					this.attr({
-						"fill": "#0a0",
-						"stroke-width": "1.5"
-					});
-					$('.site-list-city.city-' + this.id).css({
-						'background': 'rgba(51, 204, 204, .3)',
-						'border-color': 'rgba(51, 204, 204, .55)'
-					});
-				}, function () {
-					this.attr({
-						"fill": "#a00",
-						"stroke-width": "1"
-				});
-				$('.site-list-city.city-' + this.id).css({
-					'background': 'rgba(0, 0, 0, 0)',
-					'border-color': 'rgba(0, 0, 0, 0)'
-				});
-			});
+			cityMarkerHover(cityMarker);
 			
 			// Create side label for each city
 			$('#site-list').append('<div class="site-list-city city-' + cityMarker.id + '"><dt>' + city + '</dt></div>');
+			siteListHover('city-' + cityMarker.id);
 			addTableWrapper(city, 'city-' + cityMarker.id);
 
 			// Create a label for each site
@@ -171,6 +156,7 @@ window.onload = function () {
 				cityY += 12;
 			}
 		}
+
 	}
 
 	function drawEvanston() {
@@ -222,6 +208,57 @@ window.onload = function () {
 	function replaceWithDashes(string) {
 		return string.replace(/[^0-9A-Za-z]/g,'-');
 	}
+
+	function cityMarkerHover(object) {
+		object.hover(function () {
+				this.attr({
+					"fill": "#0a0",
+					"stroke-width": "1.5"
+				});
+				$('.site-list-city.city-' + this.id).css({
+					'background': 'rgba(51, 204, 204, .3)',
+					'border-color': 'rgba(51, 204, 204, .55)'
+				});
+			} , function () {
+				this.attr({
+					"fill": "#a00",
+					"stroke-width": "1"
+				});
+				$('.site-list-city.city-' + this.id).css({
+					'background': 'rgba(0, 0, 0, 0)',
+					'border-color': 'rgba(0, 0, 0, 0)'
+				});
+		});
+	}
+
+	function siteListHover(cityClass)  {
+		$('.site-list-city.' + cityClass).hover(function () {
+
+			cityMarkers[$(this).children('dt').text()].attr({
+				"fill": "#0a0",
+				"stroke-width": "1.5"
+			});
+
+			$(this).css({
+				'background': 'rgba(51, 204, 204, .3)',
+				'border-color': 'rgba(51, 204, 204, .55)'
+			});
+		}, function() {
+			
+			cityMarkers[$(this).children('dt').text()].attr({
+				"fill": "#a00",
+				"stroke-width": "1"
+			});
+
+			$(this).css({
+				'background': 'rgba(0, 0, 0, 0)',
+				'border-color': 'rgba(0, 0, 0, 0)'
+			});
+		});
+
+	}
+
+	
 }
 
 
