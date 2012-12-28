@@ -129,10 +129,10 @@ window.onload = function () {
 			cityMarker.click(function () {
 				fadeMap();
 				// reveal the information about that city
-				var cityClass = '.city-' + this.id;
+				var cityClass = 'city-' + this.id;
 				setTimeout(function () {
 					$('#map-icon').fadeIn(SHOW_TIME);
-					$('.site-table' + cityClass).fadeIn(SHOW_TIME);
+					$('.site-table.' + cityClass).fadeIn(SHOW_TIME);
 				}, FADE_TIME);
 			});
 
@@ -233,7 +233,6 @@ window.onload = function () {
 
 	function siteListHover(cityClass)  {
 		$('.site-list-city.' + cityClass).hover(function () {
-
 			cityMarkers[$(this).children('dt').text()].attr({
 				"fill": "#0a0",
 				"stroke-width": "1.5"
@@ -244,7 +243,6 @@ window.onload = function () {
 				'border-color': 'rgba(51, 204, 204, .55)'
 			});
 		}, function() {
-			
 			cityMarkers[$(this).children('dt').text()].attr({
 				"fill": "#a00",
 				"stroke-width": "1"
@@ -254,6 +252,15 @@ window.onload = function () {
 				'background': 'rgba(0, 0, 0, 0)',
 				'border-color': 'rgba(0, 0, 0, 0)'
 			});
+		});
+
+		$('.site-list-city.' + cityClass).click(function () {
+			fadeMap();
+			// reveal the information about that city
+			setTimeout(function () {
+				$('#map-icon').fadeIn(SHOW_TIME);
+				$('.site-table.' + cityClass).fadeIn(SHOW_TIME);
+			}, FADE_TIME);
 		});
 
 	}
