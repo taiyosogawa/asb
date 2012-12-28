@@ -87,6 +87,7 @@ window.onload = function () {
 			$(this).fadeOut(FAST_FADE_TIME);
 			$('.site-table').fadeOut(FAST_FADE_TIME);
 			setTimeout(function () {
+				$('.site-table').hide();
 				showMap();
 			}, FAST_FADE_TIME);
 			
@@ -132,6 +133,7 @@ window.onload = function () {
 				var cityClass = 'city-' + this.id;
 				setTimeout(function () {
 					$('#map-icon').fadeIn(SHOW_TIME);
+					$('.site-table').hide();
 					$('.site-table.' + cityClass).fadeIn(SHOW_TIME);
 				}, FADE_TIME);
 			});
@@ -255,14 +257,23 @@ window.onload = function () {
 		});
 
 		$('.site-list-city.' + cityClass).click(function () {
-			fadeMap();
-			// reveal the information about that city
-			setTimeout(function () {
-				$('#map-icon').fadeIn(SHOW_TIME);
-				$('.site-table.' + cityClass).fadeIn(SHOW_TIME);
-			}, FADE_TIME);
-		});
 
+			if($('svg').is(':visible')){
+				fadeMap();
+				setTimeout(function () {
+					$('#map-icon').fadeIn(SHOW_TIME);
+					$('.site-table').hide();
+					$('.site-table.' + cityClass).fadeIn(SHOW_TIME);
+				}, FADE_TIME);
+
+			} else {
+				$('.site-table').fadeOut(FAST_FADE_TIME);
+				setTimeout(function () {
+					$('.site-table').hide();
+					$('.site-table.' + cityClass).fadeIn(SHOW_TIME);
+				}, FAST_FADE_TIME);
+			}	
+		});
 	}
 
 	
