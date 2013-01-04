@@ -61,11 +61,10 @@ ca:"M144.6,382.1L148.6,381.7L150.1,379.6L150.6,376.7L147.1,376.1L146.5,375.4L147
 }
 
 var extraCountries = {
-	dr: "M656.6,510.984L658.672,506.856L676.168,506.856L688.528,513.032L694.704,512.008L697.8,520.248L710.16,519.216L709.128,526.424L719.432,526.424L729.72,534.664L721.48,543.936L711.184,538.784L700.888,539.816L694.704,538.784L690.592,542.904L682.352,543.936L679.256,538.784L672.056,541.872L662.784,556.296L657.64,553.2L656.6,547.024L656.6,540.84L651.456,534.664L656.6,530.544L658.672,522.312L660.744,533.64z"
+	'Dominican Republic': "M656.6,510.984L658.672,506.856L676.168,506.856L688.528,513.032L694.704,512.008L697.8,520.248L710.16,519.216L709.128,526.424L719.432,526.424L729.72,534.664L721.48,543.936L711.184,538.784L700.888,539.816L694.704,538.784L690.592,542.904L682.352,543.936L679.256,538.784L672.056,541.872L662.784,556.296L657.64,553.2L656.6,547.024L656.6,540.84L651.456,534.664L656.6,530.544L658.672,522.312L660.744,533.64z"
 }
 
 var cities = {
-
 	'Athens, OH': {
 		x: 720,
 		y: 250
@@ -144,68 +143,76 @@ var cities = {
 
 var records = {
 	'Pre-WWW 2012': {
-		'Pittsburgh, PA': [
-			'Pace School',
-			'Tree Pittsburgh'
-		],
-	
-		'Madison, WI': [
-			'Community GroundWorks',
-			'Middleton Outreach Ministry and Habitat for Humanity'
-		],
+		'cities': {
+			'Pittsburgh, PA': [
+				'Pace School',
+				'Tree Pittsburgh'
+			],
+		
+			'Madison, WI': [
+				'Community GroundWorks',
+				'Middleton Outreach Ministry and Habitat for Humanity'
+			],
 
-		'Nashville, TN': [
-			'Monroe Harding Home',
-			'Second Harvest Food Bank'
-		],
-		
-		'Lexington, KY': [
-			'Community Action Council',
-			'The Nest'
-		],
-		
-		'St. Louis, MO': [
-			'Our Lady\'s Inn',
-			'Kingdom House'
-		]
+			'Nashville, TN': [
+				'Monroe Harding Home',
+				'Second Harvest Food Bank'
+			],
+			
+			'Lexington, KY': [
+				'Community Action Council',
+				'The Nest'
+			],
+			
+			'St. Louis, MO': [
+				'Our Lady\'s Inn',
+				'Kingdom House'
+			]
+		},
+
+		'extra countries': []
 	},
 
 	'Winter 2012': {
-		'New Orleans, LA': [
-			'Green Light New Orleans'
-		],
+		'cities': {
+			'New Orleans, LA': [
+				'Green Light New Orleans'
+			],
 
-		'Kansas City, MO': [
-			'Operation Breakthrough'
-		],
+			'Kansas City, MO': [
+				'Operation Breakthrough'
+			],
 
-		'Brandenton, FL': [
-			'Lake Manatee State Park'
-		],
+			'Brandenton, FL': [
+				'Lake Manatee State Park'
+			],
 
-		'Beards Fork, WV': [
-			'Southern Appalachian Labor School'
-		],
+			'Beards Fork, WV': [
+				'Southern Appalachian Labor School'
+			],
 
-		'Maryville, TN': [
-			'Once Upon a Time in Appalachia'
-		],
+			'Maryville, TN': [
+				'Once Upon a Time in Appalachia'
+			],
 
-		'Jamaica Plain, MA': [
-			'Community\nServings'
-		],
+			'Jamaica Plain, MA': [
+				'Community\nServings'
+			],
 
-		'Athens, OH': [
-			'Goodworks'
-		],
+			'Athens, OH': [
+				'Goodworks'
+			],
 
-		'Higuerito, Moca, DR': [
-			'Filter Pure'
-		],
+			'Higuerito, Moca, DR': [
+				'Filter Pure'
+			],
 
-		'Joplin, MO': [
-			'Rebuild Joplin'
-		]
+			'Joplin, MO': [
+				'Rebuild Joplin'
+			]
+		},
+
+		'extra countries': ['Dominican Republic']
 	}
 }
 

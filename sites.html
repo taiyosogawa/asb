@@ -110,6 +110,13 @@ window.onload = function () {
 
 	function refreshLabels() {
 		deleteLabels();
+		for (var country in extraCountries) {
+			stateOutlines[country].animate({"opacity": "0"}, FADE_TIME * Math.random());
+			setTimeout(function () {
+				stateOutlines[country].remove();
+			}, FADE_TIME);
+		}
+
 		$('.site-list-city').fadeOut(FAST_FADE_TIME);
 		setTimeout(function () {
 			$('.site-list-city').replaceWith('');
@@ -149,8 +156,23 @@ window.onload = function () {
 	    siteLabels = [];
 
 		trip = records[$('#trip').text()];
+
+		for (var i = 0; i < trip['extra countries'].length; i++) {
+			
+			stateOutlines[trip['extra countries'][i]] = paper.path(extraCountries[trip['extra countries'][i]]).attr({
+		    	"fill": "#33cccc",
+				"opacity": "0",
+		    	"stroke": "#fff",
+		    	"stroke-opacity": "1",
+		    	"stroke-linejoin": "round",
+		    	"stroke-miterlimit": "4",
+		    	"stroke-width": "0.75",
+		    	"stroke-dasharray": "none",
+		    }).animate({"opacity": ".8"}, SHOW_TIME);
+
+		}
 		
-		for (var city in trip) {
+		for (var city in trip['cities']) {
 			var cityX = cities[city]['x'];
 			var cityY = cities[city]['y'];
 
@@ -186,14 +208,14 @@ window.onload = function () {
 			addTableWrapper(city, 'city-' + cityMarker.id);
 
 			// Create a label for each site
-			for (var site in trip[city]) {
-				var Site = trip[city][site];
+			for (var site in trip['cities'][city]) {
+				var Site = trip['cities'][city][site];
 				
 				$('.site-list-city.city-' + cityMarker.id).append('<dd class="site-list-item city-' + cityMarker.id +'">' + Site + '</dd>');
 				$('site-list-item.city-' + cityMarker.id).fadeOut(FADE_TIME);
 				addTableRow(Site, 'city-' + cityMarker.id);
 
-				siteLabels.push(paper.text(cityX + 10, cityY - 8, trip[city][site]).attr({
+				siteLabels.push(paper.text(cityX + 10, cityY - 8, trip['cities'][city][site]).attr({
 					'text-anchor': 'start'
 				}));
 				cityY -= 12;
