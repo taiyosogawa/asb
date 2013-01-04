@@ -91,9 +91,19 @@ window.onload = function () {
 
 		if (displayTrip == 0)
 			$('#left-arrow-circle').hide();
-	
-		$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
-		refreshLabels();
+
+		if($('#map-icon').is(':visible')) {
+			$('#map-icon').fadeOut(FAST_FADE_TIME);
+			$('.site-table').fadeOut(FAST_FADE_TIME);
+			setTimeout(function () {
+				showMap();
+				$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+				refreshLabels();
+			}, FAST_FADE_TIME);	
+		} else {
+			$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+			refreshLabels();
+		}	
 	});
 
 	$('#right-arrow-circle').click(function () {
@@ -104,8 +114,18 @@ window.onload = function () {
 		if (displayTrip == trips.length - 1)
 			$('#right-arrow-circle').hide();
 	
-		$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
-		refreshLabels();
+		if($('#map-icon').is(':visible')) {
+			$('#map-icon').fadeOut(FAST_FADE_TIME);
+			$('.site-table').fadeOut(FAST_FADE_TIME);
+			setTimeout(function () {
+				showMap();
+				$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+				refreshLabels();
+			}, FAST_FADE_TIME);	
+		} else {
+			$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+			refreshLabels();
+		}	
 	});
 
 	function refreshLabels() {
@@ -356,12 +376,13 @@ window.onload = function () {
 
 	function initMapIcon() {
 		$('#map-icon').click(function () {
-			$(this).fadeOut(FAST_FADE_TIME);
+			$('#map-icon').fadeOut(FAST_FADE_TIME);
 			$('.site-table').fadeOut(FAST_FADE_TIME);
 			setTimeout(function () {
 				showMap();
 			}, FAST_FADE_TIME);	
 		});
+	
 	}
 
 }
