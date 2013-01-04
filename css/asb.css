@@ -9,6 +9,12 @@ html, body {
 	height: 100%;
 }
 
+.arrow-circle {
+	height: 20px;
+	cursor: pointer;
+	float: left;
+}
+
 .buffer {
 	overflow: auto;
 	padding: 20px;
@@ -155,6 +161,12 @@ html, body {
 	overflow: auto;
 }
 
+#map-canvas {
+	float: left; 
+	width: 940px; 
+	height: 650px;
+}
+
 #map-icon {
 	float: right; 
 	margin-right: 80px;
@@ -174,6 +186,10 @@ html, body {
 	padding: 10px;
 }
 
+#left-arrow-circle {
+	margin-right: 5px;
+}
+
 #media-buttons {
 	margin-top: 20px;
 }
@@ -184,8 +200,13 @@ html, body {
  color:
 }
 
+#right-arrow-circle {
+	margin-left: 5px;
+	display: none;
+}
+
 #site-list-container {
-	width: 210px; 
+	max-width: 210px; 
 	height: 600px; 
 	float: left;
 }
@@ -195,6 +216,10 @@ html, body {
 	font-size: 72px;
 	font-weight:900;
 	line-height: 85%;
+}
+
+#trip {
+	float:left;
 }
 
 #welcome-carousel {

@@ -24,12 +24,16 @@
       	<div style="min-height: 80px;">
       		<div class="span6">
 		        <h1>Sites</h1>
-		        <h4 id="trip">Pre-WWW 2012</h4>
+		        <h4 id="trip-container">
+		        	<img src="images/left_arrow_circle.png" id="left-arrow-circle" class="arrow-circle" />
+		        	<div id="trip">Winter 2012</div>
+		        	<img src="images/right_arrow_circle.png" id="right-arrow-circle" class="arrow-circle" />
+		        </h4>
 	    	</div>
 	        <img id="map-icon" src="images/small-map.png">
         </div>
          
-         <div id="map-canvas" style="float: left; width: 940px; height: 560px;">
+         <div id="map-canvas">
          	<!--Raphael graphics go here-->
          </div>
          <div id="site-list-container">
@@ -42,7 +46,7 @@
 
 <!--Javascript--> 
 <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>-->
-<script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript" src="scripts/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script> 
 <script type="text/javascript" src="scripts/asb.js"></script>
 <script type="text/javascript" src="scripts/map/raphael-min.js"></script>
@@ -61,6 +65,11 @@ window.onload = function () {
 
     var paper = Raphael("map-canvas", 940, 560);
 
+    // trips is a (non-associative) array of all trip records
+    var trips = Object.keys(records);
+    var displayTrip = trips.length - 1;
+    $('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+
     // stateOutlines is a set of all the states on the map
     var stateOutlines = {};
 
@@ -72,47 +81,74 @@ window.onload = function () {
 
 	// Draw the Map!
 	drawMap();
+	initMapIcon();
 
+	// This function switches between the different maps
+	$('#left-arrow-circle').click(function () {
+		$('#right-arrow-circle').show();
+		if(displayTrip > 0) 
+			displayTrip -= 1;
 
+		if (displayTrip == 0)
+			$('#left-arrow-circle').hide();
+	
+		$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+		refreshLabels();
+	});
 
+	$('#right-arrow-circle').click(function () {
+		$('#left-arrow-circle').show();
+		if(displayTrip < trips.length - 1) 
+			displayTrip += 1;
+
+		if (displayTrip == trips.length - 1)
+			$('#right-arrow-circle').hide();
+	
+		$('#trip').replaceWith('<div id="trip">' + trips[displayTrip] + '</div>');
+		refreshLabels();
+	});
+
+	function refreshLabels() {
+		deleteLabels();
+		$('.site-list-city').fadeOut(FAST_FADE_TIME);
+		setTimeout(function () {
+			$('.site-list-city').replaceWith('');
+			drawLabels();
+		}, FAST_FADE_TIME);
+	}
 
 
 	function drawMap() {
 		drawStateOutlines();
 		drawLabels();
 		drawEvanston();
-
-		// Initialize the icon
-		$('#map-icon').click(function () {
-			$(this).fadeOut(FAST_FADE_TIME);
-			$('.site-table').fadeOut(FAST_FADE_TIME);
-			setTimeout(function () {
-				$('.site-table').hide();
-				showMap();
-			}, FAST_FADE_TIME);
-			
-		});
 	}
 
 	function drawStateOutlines() {
+
+		// Reset the global variable
+		stateOutlines = {};
+
 	    for (var state in usMap) {
 	        stateOutlines[state] = paper.path(usMap[state]).attr({
 		    	"fill": "#33cccc",
-				"opacity": ".8",
+				"opacity": "0",
 		    	"stroke": "#fff",
 		    	"stroke-opacity": "1",
 		    	"stroke-linejoin": "round",
 		    	"stroke-miterlimit": "4",
 		    	"stroke-width": "0.75",
 		    	"stroke-dasharray": "none",
-		    });
+		    }).animate({"opacity": ".8"}, SHOW_TIME);
 	    }
 	}
 
 	function drawLabels() {
-		// Grab the trip name from the label
-		tripName = replaceWithDashes($('#trip').text());
-		trip = records[tripName];
+		// Reset global variables
+	    cityMarkers = {};
+	    siteLabels = [];
+
+		trip = records[$('#trip').text()];
 		
 		for (var city in trip) {
 			var cityX = cities[city]['x'];
@@ -121,8 +157,11 @@ window.onload = function () {
 			var cityMarker = paper.circle(cityX, cityY, 6).attr({
 				"stroke-width": "1",
 				"fill": "#a00",
-				"cursor": "pointer"
+				"cursor": "pointer",
+				"opacity": 0
 			});
+
+			cityMarker.animate({"opacity": "1"}, SHOW_TIME);
 
 			cityMarkers[city] = cityMarker;
 
@@ -141,7 +180,8 @@ window.onload = function () {
 			cityMarkerHover(cityMarker);
 			
 			// Create side label for each city
-			$('#site-list').append('<div class="site-list-city city-' + cityMarker.id + '"><dt>' + city + '</dt></div>');
+			$('#site-list').append('<div class="site-list-city city-' + cityMarker.id + '" style="display: none;"><dt>' + city + '</dt></div>');
+			$('.site-list-city.city-' + cityMarker.id).fadeIn(SHOW_TIME);
 			siteListHover('city-' + cityMarker.id);
 			addTableWrapper(city, 'city-' + cityMarker.id);
 
@@ -150,22 +190,24 @@ window.onload = function () {
 				var Site = trip[city][site];
 				
 				$('.site-list-city.city-' + cityMarker.id).append('<dd class="site-list-item city-' + cityMarker.id +'">' + Site + '</dd>');
+				$('site-list-item.city-' + cityMarker.id).fadeOut(FADE_TIME);
 				addTableRow(Site, 'city-' + cityMarker.id);
 
-				siteLabels.push(paper.text(cityX + 10, cityY - 20, trip[city][site]).attr({
+				siteLabels.push(paper.text(cityX + 10, cityY - 8, trip[city][site]).attr({
 					'text-anchor': 'start'
 				}));
-				cityY += 12;
+				cityY -= 12;
 			}
 		}
 
 	}
 
 	function drawEvanston() {
-		cityMarkers['Evanston'] = paper.circle(cities['Evanston']['x'], cities['Evanston']['y'], 8).attr({
+		cityMarkers['Evanston, IL'] = paper.circle(cities['Evanston, IL']['x'], cities['Evanston, IL']['y'], 8).attr({
 				"stroke-width": "2",
-				"fill": "#a0a"
-		});
+				"fill": "#a0a",
+				"opacity": "0"
+		}).animate({"opacity": "1"}, SHOW_TIME * Math.random());
 	}
 
 	function fadeMap() {
@@ -175,6 +217,11 @@ window.onload = function () {
 		setTimeout(function () {
 			$('svg').hide();
 		}, FADE_TIME);
+	}
+
+	function deleteLabels() {
+		deleteElements(cityMarkers);
+		deleteElements(siteLabels);
 	}
 
 	function showMap() {
@@ -187,6 +234,16 @@ window.onload = function () {
 	function fadeElements(array) {
 		for (var element in array){
 			array[element].animate({"opacity": "0"}, FADE_TIME * Math.random());	
+		}
+	}
+
+	function deleteElements(array) {
+		for (var element in array){
+			array[element].animate({"opacity": "0"},FADE_TIME);
+			setTimeout(function () {
+				array[element].remove();
+			}, FADE_TIME);
+				
 		}
 	}
 	
@@ -276,7 +333,16 @@ window.onload = function () {
 		});
 	}
 
-	
+	function initMapIcon() {
+		$('#map-icon').click(function () {
+			$(this).fadeOut(FAST_FADE_TIME);
+			$('.site-table').fadeOut(FAST_FADE_TIME);
+			setTimeout(function () {
+				showMap();
+			}, FAST_FADE_TIME);	
+		});
+	}
+
 }
 
 

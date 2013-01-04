@@ -57,74 +57,150 @@ az:"M144.9,382.6L142.2,384.7L141.9,386.2L142.4,387.2L161.3,397.8L173.4,405.4L188
 nv:"M196.3,185.5L172.7,314.3L170.9,314.7L169.3,317.1L166.9,317.1L165.5,314.4L162.8,314L162.1,312.9L161,312.8L158.2,314.5L157.9,321.3L157.6,327L157.2,335.6L155.8,337.7L153.3,336.6L84.3,232.4L103.3,164.9L196.3,185.5z",
 or:"M148.7,175.5L157.5,140.7L158.6,136.5L160.9,130.8L160.3,129.7L157.8,129.6L156.5,127.9L157,126.5L157.5,123.2L161.9,117.7L163.8,116.7L164.9,115.5L166.4,111.9L170.4,106.3L174,102.4L174.2,99L171,96.5L169.2,91.8L156.5,88.2L141.4,84.7L126,84.8L125.5,83.4L120.1,85.5L115.6,84.9L113.2,83.3L111.9,84L107.2,83.8L105.5,82.4L100.3,80.3L99.5,80.5L95.1,79L93.2,80.8L87,80.5L81.1,76.3L81.8,75.5L82,67.8L79.7,63.9L75.6,63.3L74.9,60.8L72.5,60.3L66.7,62.4L64.5,68.9L61.2,78.9L58,85.3L53,99.4L46.5,113L38.5,125.6L36.5,128.5L35.7,137.1L36.1,149.2L148.7,175.5z",
 wa:"M102,7.6L106.4,9L116.1,11.8L124.7,13.7L144.7,19.4L167.7,25L182.9,28.2L169.2,91.8L156.8,88.3L141.3,84.7L126.1,84.8L125.6,83.4L120,85.6L115.4,84.8L113.3,83.3L112,83.9L107.2,83.8L105.5,82.4L100.3,80.3L99.5,80.5L95.1,78.9L93.2,80.8L87,80.5L81,76.3L81.8,75.4L81.9,67.7L79.7,63.9L75.6,63.3L74.9,60.8L72.6,60.3L69,61.5L66.8,58.3L67.1,55.4L69.9,55.1L71.5,51L68.9,49.9L69,46.2L73.4,45.6L70.7,42.8L69.2,35.7L69.9,32.8L69.9,24.9L68.1,21.6L70.3,12.2L72.4,12.7L74.9,15.6L77.6,18.2L80.8,20.2L85.4,22.3L88.4,22.9L91.4,24.4L94.7,25.3L97,25.2L97,22.8L98.3,21.6L100.4,20.3L100.7,21.5L101.1,23.2L98.8,23.7L98.5,25.8L100.2,27.3L101.4,29.7L102,31.6L103.5,31.5L103.6,30.2L102.7,28.9L102.2,25.7L103,23.9L102.3,22.4L102.3,20.2L104.1,16.6L103,14L100.6,9.2L100.9,8.4L102,7.6zM92.6,13.5L94.6,13.4L95.1,14.8L96.6,13.1L99,13.1L99.8,14.7L98.2,16.4L98.9,17.2L98.1,19.2L96.8,19.6 C 96.8,19.6 95.9,19.7 95.9,19.4 C 95.9,19 97.3,16.8 97.3,16.8L95.6,16.2L95.3,17.7L94.6,18.3L93.1,16L92.6,13.5z",
-ca:"M144.6,382.1L148.6,381.7L150.1,379.6L150.6,376.7L147.1,376.1L146.5,375.4L147,373.4L146.9,372.8L148.8,372.2L151.8,369.4L152.4,364.4L153.8,361L155.7,358.8L159.3,357.2L160.9,355.6L161,353.5L160,352.9L159,351.9L157.8,346L155.1,341.2L155.7,337.7L153.3,336.6L84.2,232.5L103.1,164.9L36,149.2L34.5,153.9L34.4,161.3L29.2,173.1L26.1,175.7L25.8,176.9L24,177.7L22.6,181.9L21.8,185.1L24.5,189.3L26.1,193.5L27.2,197.1L26.9,203.5L25.1,206.6L24.5,212.4L23.5,216.1L25.3,220L28.1,224.5L30.3,229.4L31.6,233.4L31.3,236.7L31,237.2L31,239.3L36.6,245.6L36.1,248L35.5,250.2L34.8,252.2L35,260.4L37.1,264.1L39,266.7L41.8,267.2L42.8,270L41.6,273.5L39.5,275.1L38.4,275.1L37.6,279L38.1,281.9L41.3,286.3L42.9,291.6L44.4,296.3L45.7,299.4L49.1,305.2L50.5,307.8L51,310.7L52.6,311.7L52.6,314.1L51.8,316L50,323.2L49.6,325.1L52,327.8L56.2,328.3L60.7,330.1L64.6,332.2L67.5,332.2L70.4,335.3L73,340.1L74.1,342.4L78,344.5L82.9,345.3L84.3,347.4L85,350.6L83.5,351.3L83.8,352.3L87.1,353.1L89.8,353.2L93,351.5L96.9,355.7L97.7,358L100.2,362.2L100.6,365.4L100.6,374.8L101.1,376.6L111.1,378.1L130.8,380.8L144.6,382.1zM56.5,338.4L57.8,340L57.6,341.3L54.4,341.2L53.8,340L53.2,338.5L56.5,338.4zM58.4,338.4L59.7,337.8L63.2,339.9L66.3,341.1L65.4,341.7L60.9,341.5L59.3,339.9L58.4,338.4zM79.1,358.2L80.9,360.6L81.7,361.5L83.3,362.1L83.8,360.7L82.9,358.9L80.2,356.9L79.1,357L79.1,358.2zM77.7,366.9L79.5,370L80.7,372L79.2,372.2L77.9,371 C 77.9,371 77.2,369.6 77.2,369.1 C 77.2,368.7 77.2,367 77.2,367L77.7,366.9z"}
-
-
+ca:"M144.6,382.1L148.6,381.7L150.1,379.6L150.6,376.7L147.1,376.1L146.5,375.4L147,373.4L146.9,372.8L148.8,372.2L151.8,369.4L152.4,364.4L153.8,361L155.7,358.8L159.3,357.2L160.9,355.6L161,353.5L160,352.9L159,351.9L157.8,346L155.1,341.2L155.7,337.7L153.3,336.6L84.2,232.5L103.1,164.9L36,149.2L34.5,153.9L34.4,161.3L29.2,173.1L26.1,175.7L25.8,176.9L24,177.7L22.6,181.9L21.8,185.1L24.5,189.3L26.1,193.5L27.2,197.1L26.9,203.5L25.1,206.6L24.5,212.4L23.5,216.1L25.3,220L28.1,224.5L30.3,229.4L31.6,233.4L31.3,236.7L31,237.2L31,239.3L36.6,245.6L36.1,248L35.5,250.2L34.8,252.2L35,260.4L37.1,264.1L39,266.7L41.8,267.2L42.8,270L41.6,273.5L39.5,275.1L38.4,275.1L37.6,279L38.1,281.9L41.3,286.3L42.9,291.6L44.4,296.3L45.7,299.4L49.1,305.2L50.5,307.8L51,310.7L52.6,311.7L52.6,314.1L51.8,316L50,323.2L49.6,325.1L52,327.8L56.2,328.3L60.7,330.1L64.6,332.2L67.5,332.2L70.4,335.3L73,340.1L74.1,342.4L78,344.5L82.9,345.3L84.3,347.4L85,350.6L83.5,351.3L83.8,352.3L87.1,353.1L89.8,353.2L93,351.5L96.9,355.7L97.7,358L100.2,362.2L100.6,365.4L100.6,374.8L101.1,376.6L111.1,378.1L130.8,380.8L144.6,382.1zM56.5,338.4L57.8,340L57.6,341.3L54.4,341.2L53.8,340L53.2,338.5L56.5,338.4zM58.4,338.4L59.7,337.8L63.2,339.9L66.3,341.1L65.4,341.7L60.9,341.5L59.3,339.9L58.4,338.4zM79.1,358.2L80.9,360.6L81.7,361.5L83.3,362.1L83.8,360.7L82.9,358.9L80.2,356.9L79.1,357L79.1,358.2zM77.7,366.9L79.5,370L80.7,372L79.2,372.2L77.9,371 C 77.9,371 77.2,369.6 77.2,369.1 C 77.2,368.7 77.2,367 77.2,367L77.7,366.9z",
+dr:"M272.075,173.873L272.334,173.357L274.521,173.357L276.06600000000003,174.129L276.838,174.001L277.225,175.031L278.77000000000004,174.90200000000002L278.641,175.80300000000003L279.92900000000003,175.80300000000003L281.21500000000003,176.83300000000003L280.18500000000006,177.99200000000002L278.8980000000001,177.348L277.6110000000001,177.477L276.8380000000001,177.348L276.32400000000007,177.863L275.2940000000001,177.992L274.9070000000001,177.34799999999998L274.0070000000001,177.73399999999998L272.8480000000001,179.53699999999998L272.20500000000015,179.14999999999998L272.07500000000016,178.378L272.07500000000016,177.605L271.4320000000002,176.833L272.07500000000016,176.318L272.3340000000002,175.28900000000002L272.5930000000002,176.705Z"
+}
 var cities = {
-	
-	// Evanston, IL
 
-	Evanston: {
+	'Athens, OH': {
+		x: 720,
+		y: 250
+	},
+
+	'Brandenton, FL': {
+		x: 752,
+		y: 510
+	},
+	
+	'Beards Fork, WV': {
+		x: 740,
+		y: 278
+	},
+
+	'Evanston, IL': {
 		x: 615,
 		y: 208
 	},
+
+	'Higuerito, Moca, DR': {
+		x: 615,
+		y: 208
+	},
+
+	'Jamaica Plain, MA': {
+		x: 876,
+		y: 157
+	},
+
+	'Joplin, MO': {
+		x: 512,
+		y: 318
+	},
+
+	'Kansas City, MO': {
+		x: 508,
+		y: 270
+	},
 	
-	// Lexington, KY
-	Lexington: {
+	'Lexington, KY': {
 		x: 680,
 		y: 290
 	},
 
-	// Madison, WI
-	Madison: {
+	'Madison, WI': {
 		x: 590,
 		y: 182
 	},
+
+	'Maryville, TN': {
+		x: 700,
+		y: 334
+	},
 	
-	// Nashville, TN
-	Nashville: {
+	'Nashville, TN': {
 		x: 655,
 		y: 333
 	},
+
+	'New Orleans, LA': {
+		x: 608,
+		y: 477
+	},
 	
-	// Pittsburgh, PA
-	Pittsburgh: {
+	'Pittsburgh, PA': {
 		x: 750,
 		y: 223
 	},
 		
-	// St. Louis, MO
-	'St. Louis': {
+	'St. Louis, MO': {
 		x: 580,
 		y: 285
 	}
 }
 
 var records = {
-	'Pre-WWW-2012': {
-		Pittsburgh: [
+	'Pre-WWW 2012': {
+		'Pittsburgh, PA': [
 			'Pace School',
 			'Tree Pittsburgh'
 		],
 	
-		Madison: [
+		'Madison, WI': [
 			'Community GroundWorks',
 			'Middleton Outreach Ministry and Habitat for Humanity'
 		],
 
-		Nashville: [
+		'Nashville, TN': [
 			'Monroe Harding Home',
 			'Second Harvest Food Bank'
 		],
 		
-		Lexington: [
+		'Lexington, KY': [
 			'Community Action Council',
 			'The Nest'
 		],
 		
-		'St. Louis': [
+		'St. Louis, MO': [
 			'Our Lady\'s Inn',
 			'Kingdom House'
+		]
+	},
+
+	'Winter 2012': {
+		'New Orleans, LA': [
+			'Green Light New Orleans'
+		],
+
+		'Kansas City, MO': [
+			'Operation Breakthrough'
+		],
+
+		'Brandenton, FL': [
+			'Lake Manatee State Park'
+		],
+
+		'Beards Fork, WV': [
+			'Southern Appalachian Labor School'
+		],
+
+		'Maryville, TN': [
+			'Once Upon a Time in Appalachia'
+		],
+
+		'Jamaica Plain, MA': [
+			'Community\nServings'
+		],
+
+		'Athens, OH': [
+			'Goodworks'
+		],
+
+		'Higuerito, Moca, DR': [
+			'Filter Pure'
+		],
+
+		'Joplin, MO': [
+			'Rebuild Joplin'
 		]
 	}
 }
@@ -157,6 +233,59 @@ var sites = {
 		'image': 'images/sites/cgw.jpeg'
 	},
 
+	'Community\nServings': {
+		'city': 'Jamaica Plain',
+		'state': 'Massachusetts',
+		'site-description': 'HIV/AIDS has spread throughout much of the U.S. and each region has had to grapple with questions of \
+			prevention and treatment. Boston has responded in unique ways with organizations such as Community Servings at the forefront. \
+			Community Servings provides those struggling with HIV/AIDS and other critical illnesses in the greater Boston area with food.',
+		'activity-description': 'Volunteers at this site will work closely with the chef at Community Servings, preparing and packaging the \
+			food for delivery.',
+		'url': 'http://www.commaction.org/',
+		'image': 'images/sites/community_servings.jpg'
+	},
+
+	'Filter Pure': {
+		'city': 'Higuerito, Moca',
+		'state': 'Dominican Republic',
+		'site-description': 'FilterPure is a U.S. non-profit 501(c)3 organization focused on solving the problem of contaminated drinking \
+			water world-wide. FilterPure works in developing countries to facilitate production of a ceramic water filter that eliminates \
+			turbidity and micro bacteria at a rate of 99.9%. FilterPure is committed to enabling sustainable enterprise, providing a quality \
+			product and service, and educating people about sanitation, hygiene and life styles - while always maintaining respect for the \
+			culture and the individual.',
+		'activity-description': 'Participants will travel to the FilterPure factory in the Dominican Republic, where they will spend a day in \
+			the filter factory learning how the filters are manufactured. Participants will then venture into communities to help install filters \
+			in family homes.',
+		'url': 'http://www.filterpurefilters.org/',
+		'image': 'images/sites/filter_pure.jpg'
+	},
+
+	'Green Light New Orleans': {
+		'city': 'New Orleans',
+		'state': 'Louisiana',
+		'site-description': 'Green Light New Orleans is a nonprofit organization that seeks to reduce carbon emissions through \
+			the replacement of traditional, non-environmentally friendly bulbs with compact fluorescent lights (CFLs). The bulbs \
+			are supplied to homeowners and renters free of charge and installed by volunteers for immediate enjoyment by homeowners.',
+		'activity-description': 'On this trip, volunteers will be able to interact directly with homeowners as they install CFLs in \
+			their homes while getting to know the different aspects of the city. Other activities that volunteers may be doing include \
+			building backyard vegetable gardens and other community improvement projects!',
+		'url': 'http://www.greenlightneworleans.org/',
+		'image': 'images/sites/green_light_new_orleans.jpg'
+	},
+
+	'Goodworks': {
+		'city': 'Athens',
+		'state': 'Ohio',
+		'site-description': 'Participants on this site will inevitably feel the “good vibrations” by volunteering with Goodworks, \
+			an organization that aids impoverished families and individuals in rural Appalachia. In addition to providing meals, childcare, \
+			and love to the residents of the Timothy House shelter, Goodworks also works with the community of Athens County by aiding \
+			widows, senior citizens and people with disabilities who are no longer able to care for their property and do not have the income \
+			to pay someone to do the work for them.',
+		'activity-description': '',
+		'url': 'http://www.good-works.net/',
+		'image': 'images/sites/goodworks.jpg'
+	},
+
 	'Kingdom House': {
 		'city': 'St. Louis',
 		'state': 'Missouri',
@@ -167,6 +296,18 @@ var sites = {
 		thrift shop, watching young ones at the day care, and participating in the gardening program.',
 		'url': 'http://www.kingdomhouse.org/',
 		'image': 'images/sites/kingdomhouse.jpg'
+	},
+
+	'Lake Manatee State Park': {
+		'city': 'Brandenton',
+		'state': 'Florida',
+		'site-description': 'Lake Manatee State Park is part of the network of Florida State Parks. One of the most beautiful \
+			ecosystems in our country, it is also one of the most fragile. Made up of pine flatwoods, Sand Pine scrub, marshes, \
+			and hardwood forests, it lies on the south shore of 2,400 acre Lake Manatee. ',
+		'activity-description': 'Participants on this site will focus on conversation education and environmental service which \
+		may include maintaining trails, fence lines, fire breaks, and exotic plant removal.',
+		'url': 'http://www.floridastateparks.org/lakemanatee/',
+		'image': 'images/sites/lake_manatee_state_park.jpg'
 	},
 
 	'Middleton Outreach Ministry and Habitat for Humanity': {
@@ -215,6 +356,32 @@ var sites = {
 		'image': 'images/sites/thenest.JPG'
 	},
 
+	'Operation Breakthrough': {
+		'city': 'Kansas City',
+		'state': 'Missouri',
+		'site-description': 'This organization cares for more than 600 children between the ages of 6 and 18 each day, more than \
+			98% of them below the federal poverty guidelines. Nearly a quarter are homeless or near homeless, living in homeless \
+			shelters or abandoned buildings. Another quarter live in foster care or other care facilities due to abuse, neglect, \
+			or other family crisis.',
+		'activity-description': 'Participants will have the opportunity to work in the preschool classrooms, hear guest speakers, \
+			participate in reflective activities, and assist with miscellaneous/general projects determined by the Volunteer Department.',
+		'url': 'https://www.operationbreakthrough.org/',
+		'image': 'images/sites/operation_breakthrough.png'
+	},
+
+	'Once Upon a Time in Appalachia': {
+		'city': 'Maryville',
+		'state': 'Tennessee',
+		'site-description': 'Located on 40 acres in the foothills of the Smoky Mountains, Once Upon a Time is an organization \
+			that works with the Eastern Band of the Cherokee Nation, the environment, and rural Appalachia.',
+		'activity-description': 'Working with numerous agencies and communities in the area, volunteers will work with the \
+			Cherokee Community, specifically with both the elderly and the children, help prepare a ballfield for Indian Fish Game, \
+			tutoring youth, removing exotic and invasive plant species, trail maintenance, as well as spending time doing homesteading \
+			tasks such as splitting firewood and making and canning applesauce.',
+		'url': 'http://www.onceuponatimebreakaway.com/',
+		'image': 'images/sites/once_upon_a_time_in_appalachia.jpg'
+	},
+
 	'Our Lady\'s Inn': {
 		'city': 'St. Louis',
 		'state': 'Missouri',
@@ -243,6 +410,21 @@ var sites = {
 		'image': 'images/sites/pace.jpg'
 	},
 
+	'Rebuild Joplin': {
+		'city': 'Joplin',
+		'state': 'Missouri',
+		'site-description': 'On May 22, 2011, a multi-vortex EF-5 tornado ripped a 13-mile path of destruction through \
+			Joplin and its neighboring communities. The devastation left behind was impossible to imagine, affecting \
+			thousands of residents and taking 162 lives. A year and a half later, Joplin has begun their rebuilding process \
+			and healing in the community is significant. However, there is much that still needs to be done. On this site, \
+			participants will help address the post-tornado needs in the Joplin community holistically, helping to create a \
+			brighter and more vibrant future for its families and surrounding communities.',
+		'activity-description': 'Participants will be able to help rebuild permanent housing for homeowners and renters in Joplin, \
+			roofing, dry walling, and other activities based on the skill level of the group and the most immediate needs of the community.',
+		'url': 'http://rebuildjoplin.org/',
+		'image': 'images/sites/rebuild_joplin.jpg'
+	},
+
 	'Second Harvest Food Bank': {
 		'city': 'Nashville',
 		'state': 'Tennessee',
@@ -253,6 +435,21 @@ var sites = {
 			of the community through assisting in food donation collection, sorting, and distribution.',
 		'url': 'http://secondharvestmidtn.org/',
 		'image': 'images/sites/middleharvest.jpg'
+	},
+
+	'Southern Appalachian Labor School': {
+		'city': 'Beards Fork',
+		'state': 'West Virginia',
+		'site-description': 'The mission of the this organization is to provide education, research, and linkages for working \
+			class and disenfranchised peoples in order to promote understanding, empowerment, and change.  It serves one of the \
+			poorest regions in the country, where the high school dropout rate is such a large problem that the state instituted a \
+			policy that prohibits individuals who did not graduate from getting a drivers license.',
+		'activity-description': 'Participants will work in the community center with young adults from local area to help improve \
+			reading skills and help rehab houses that have fallen apart since their speedy construction for coal mining families \
+			decades ago.  Unique to this site, volunteer groups are paired with teens who dropped out of high school from the \
+			community who are working with the organization to get their GED. ',
+		'url': 'http://www.sals.info/',
+		'image': 'images/sites/southern_appalachian_labor_school.jpg'
 	},
 
 	'Tree Pittsburgh': {
