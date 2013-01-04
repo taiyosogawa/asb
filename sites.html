@@ -113,7 +113,6 @@ window.onload = function () {
 		for (var country in extraCountries) {
 			stateOutlines[country].animate({"opacity": "0"}, FADE_TIME * Math.random());
 			setTimeout(function () {
-				stateOutlines[country].remove();
 			}, FADE_TIME);
 		}
 
