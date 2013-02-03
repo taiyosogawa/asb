@@ -70,6 +70,11 @@ var cities = {
 		y: 250
 	},
 
+	'Atlanta, GA': {
+		x: 670,
+		y: 355
+	},
+
 	'Brandenton, FL': {
 		x: 752,
 		y: 510
@@ -80,14 +85,39 @@ var cities = {
 		y: 278
 	},
 
+	'Council Bluffs, IA': {
+		x: 485,
+		y: 225
+	},
+
 	'Evanston, IL': {
 		x: 615,
 		y: 208
 	},
 
+	'Flint, MI': {
+		x: 580,
+		y: 82
+	},
+
+	'Goshen, IN': {
+		x: 650,
+		y: 218
+	},
+
+	'Grand Rapids, MI': {
+		x: 646,
+		y: 173
+	},
+
 	'Higuerito, Moca, DR': {
 		x: 688,
 		y: 525
+	},
+
+	'Hohenwald, TN': {
+		x: 655,
+		y: 333
 	},
 
 	'Jamaica Plain, MA': {
@@ -110,6 +140,11 @@ var cities = {
 		y: 290
 	},
 
+	'Luck, WI': {
+		x: 545,
+		y: 136
+	},
+
 	'Madison, WI': {
 		x: 590,
 		y: 182
@@ -118,6 +153,21 @@ var cities = {
 	'Maryville, TN': {
 		x: 700,
 		y: 334
+	},
+
+	'Millville, NJ': {
+		x: 837,
+		y: 226
+	},
+
+	'Milwaukee, WI': {
+		x: 611,
+		y: 192
+	},
+
+	'Murphy, NC': {
+		x: 703,
+		y: 347
 	},
 	
 	'Nashville, TN': {
@@ -138,6 +188,16 @@ var cities = {
 	'St. Louis, MO': {
 		x: 580,
 		y: 285
+	},
+
+	'South Bend, IN': {
+		x: 620,
+		y: 300
+	},
+
+	'Westcliffe, CO': {
+		x: 326,
+		y: 283
 	}
 }
 
@@ -187,10 +247,6 @@ var records = {
 				'Lake Manatee State Park'
 			],
 
-			'Beards Fork, WV': [
-				'Southern Appalachian Labor School'
-			],
-
 			'Maryville, TN': [
 				'Once Upon a Time in Appalachia'
 			],
@@ -213,10 +269,114 @@ var records = {
 		},
 
 		'extra countries': ['Dominican Republic']
+	},
+
+	'Spring 2012': {
+		'cities': {
+			'Goshen, IN': [
+				'La Casa'
+			],
+
+			'Millville, NJ': [
+				'CC International'
+			],
+
+			'Westcliffe, CO': [
+				'Mission: Wolf'
+			],
+
+			/*
+			'Hohenwald, TN': [
+				'Sanctuary for Elephants'
+			],
+			*/
+
+			'Murphy, NC': [
+				'Hiwassee River\nWatershed Coalition'
+			],
+
+			'Luck, WI': [
+				'Anathoth Community Farm'
+			],
+
+			'Council Bluffs, IA': [
+				'Boys and Girls Club\nof Council Bluffs'
+			],
+
+			'Milwaukee, WI': [
+				'\vGrowing Power'
+			],
+
+			/*
+			'South Bend, IN': [
+				'Center for the Homeless'
+			],
+			
+			'Atlanta, GA': [
+				'Atlanta Harm Reduction Coalition'
+			],
+			*/
+
+			'Grand Rapids, MI': [
+				'Lutheran Social Services of Michigan'
+			],
+
+			'St. Louis, MO': [
+				'Operation Food Search'
+			]/*,
+			DONT FORGET THIS COMMA!!!
+			'Flint, MI': [
+				'Whaley Children\' Center'
+			]
+			*/
+		},
+		'extra countries': []
 	}
 }
 
 var sites = {
+	'Anathoth Community Farm': {
+		'city': 'Luck',
+		'state': 'Wisconsin',
+		'site-description': 'Anathoth is a community like no other; its inhabitants are focused on sustainable living and promoting nonviolence. \
+			Members at Anathoth lead lifestyles that allow them to minimize harmful impact on the planet, and maximize their impact on those in need. \
+			A recent project involved growing organic crops to send to victims of the Japanese nuclear disaster. Anathoth also has a four-season \
+			greenhouse that is in operation all year.',  
+		'activity-description': 'Volunteers will assist in a variety of agricultural projects and learn about/temporarily live the lifestyle of \
+		Anathoth’s residents. This site has a strong educational component surrounding sustainability and non-violence',
+		'url': 'http://anathothcommunityfarm.org/',
+		'image': 'images/sites/anathoth_community_farm.jpg'
+	},
+
+	'Boys and Girls Club\nof Council Bluffs': {
+		'city': 'Council Bluffs',
+		'state': 'Iowa',
+		'site-description': 'Boys & Girls Clubs of Council Bluffs, IA, provides a safe, fun place for youth to go after school and during the summer. \
+			At the Club, programs are offered in the areas of Character & Leadership, Health & Life Skills, Education & Career Development, The Arts, \
+			Sports, Fitness & Recreation and Technology. The Club is open to any child between the ages of 6 and 18 for only a $30 yearly membership fee, \
+			which includes a daily, hot nutritious meal. Since the fees are so low, the Boys & Girls Club relies on the support of the local community to \
+			help provide this positive place for young people.', 
+		'activity-description': 'At the Boys & Girls Club, volunteers will provide support the the Center\'s staff and interact with children in \
+			the after school program.',  
+		'url': 'http://www.bgccb.org/',
+		'image': 'images/sites/boys_and_girls_club_of_council_bluffs.jpg'
+	},
+
+	'CC International': {
+		'city': 'Millville',
+		'state': 'New Jersey',
+		'site-description': 'Community Collaborations International works on disaster relief projects in hard-hit areas around the country. \
+			This spring, ASB will be sending a group to Millville, NJ to assist with CCI\'s Hurricane Sandy relief efforts. In 2012 alone, \
+			NJ had been hit by 3 storms that have been declared as federal disasters: Hurricane Irene, a severe storm on June 30th, and then \
+			Superstorm Sandy. Prior to 2012, the last hurricane to have hit NJ was in 1894. Atlantic County was announced to be in a state of \
+			emergency on October 29,2012.  For a variety of reasons, Atlantic County is still in a state of emergency, although this will hopefully \
+			change soon.',
+		'activity-description': 'At CCI, volunteers will help with reconstruction and rehabilitation projects in one of the counties most devastated \
+			by Hurricane Sandy.',
+		'url': 'http://www.communitycollaborations.org/',
+		'image': 'images/sites/cc_international.jpg'
+	},
+
 	'Community Action Council': {
 		'city': 'Lexington',
 		'state': 'Kentucky',
@@ -297,6 +457,33 @@ var sites = {
 		'image': 'images/sites/goodworks.jpg'
 	},
 
+	'\vGrowing Power': {
+		'city': 'Milwaukee',
+		'state': 'Wisconsin',
+		'site-description': 'Growing Power in Milwaukee, Wisconsin, is the nation\'s first and largest urban garden. GP is a national nonprofit \
+			organization and land trust supporting people from diverse backgrounds, and the environments in which they live, by helping to provide \
+			equal access to healthy, high-quality, safe and affordable food for people in all communities. GP implements this mission by providing \
+			hands-on training, on-the-ground demonstration, outreach and technical assistance through the development of Community Food Systems \
+			that help people grow, process, market and distribute food in a sustainable manner.', 
+		'activity-description': '',  
+		'url': 'http://www.growingpower.org/',
+		'image': 'images/sites/growing_power.jpg'
+	},
+
+	'Hiwassee River\nWatershed Coalition': {
+		'city': 'Murphy',
+		'state': 'North Carolina',
+		'site-description': 'Hiwassee River Watershed Coalition is a a local, conservation nonprofit whose mission is to facilitate water \
+			quality improvements in lakes and streams throughout the upper Hiwassee River watershed within Cherokee and Clay counties in North \
+			Carolina and in northern Georgia.  For more than 10 years, HRWC has provided water quality education, funding for and implementation \
+			of voluntary watershed restoration projects, services in coordinating communication between various agencies working in our area, \
+			watershed planning, and opportunities for citizens to volunteer.',
+		'activity-description': 'Volunteers will be doing environmental restoration work along the \
+			rivers, which will likely include removing invasive species, planting native trees, and other environmental preservation work.',
+		'url': 'http://www.hrwc.net/',
+		'image': 'images/sites/hiwassee_river_watershed_coalition.jpg'
+	},
+
 	'Kingdom House': {
 		'city': 'St. Louis',
 		'state': 'Missouri',
@@ -309,6 +496,21 @@ var sites = {
 		'image': 'images/sites/kingdomhouse.jpg'
 	},
 
+	'La Casa': {
+		'city': 'Goshen',
+		'state': 'Indiana',
+		'site-description': 'La Casa in Goshen, Indiana, is a group committed to the belief that every family deserves the chance to \
+			build a better life. Their service organization helps low-income families to do so through affordable housing, community \
+			activities, and immigration and language services.',
+		'activity-description': 'For our week there, ASB will be partnering with them to renovate and repair \
+			houses in areas considered to be the "epicenter of the economic meltdown." This will include painting, roofing, sanding, and \
+			renovating residences to create the neighborhood improvement that La Casa strives for. La Casa also places an emphasis on \
+			communities being built on personal growth and family stability, and during our week we will be learning about the issues and \
+			meeting the people they affect as we work.',
+		'url': 'http://www.lacasainc.net/',
+		'image': 'images/sites/la_casa.jpg'
+	},
+
 	'Lake Manatee State Park': {
 		'city': 'Brandenton',
 		'state': 'Florida',
@@ -319,6 +521,21 @@ var sites = {
 		may include maintaining trails, fence lines, fire breaks, and exotic plant removal.',
 		'url': 'http://www.floridastateparks.org/lakemanatee/',
 		'image': 'images/sites/lake_manatee_state_park.jpg'
+	},
+
+	'Lutheran Social Services of Michigan': {
+		'city': 'Grand Rapids',
+		'state': 'Michigan',
+		'site-description': 'Lutheran Social Services of Michigan is Michigan’s largest private refugee resettlement organization. \
+			Refugees\' first experiences in the United States can often be challenging and confusing. LSSM provides sponsorship, \
+			immigration assistance, legal services, and assistance with resettlement and acculturation to refugees to ease this \
+			process. Like any resettlement agency, it is difficult to know what the needs of the organization will be so far in \
+			advance; however, volunteers can expect to aid in the programs that seek to familiarize the refugees with life in America.', 
+		'activity-description': 'Volunteers may lead a library program that helps the clients learn how to use and go to a library and \
+			learn English. Volunteers may also spend a day teaching refugees how to utilize the Grand Rapids public transit system. \
+			Other service work may include other tasks such as preparing an apartment for refugee arrivals.',
+		'url': 'http://www.lssm.org/',
+		'image': 'images/sites/lutheran_social_services_of_michigan.jpg'
 	},
 
 	'Middleton Outreach Ministry and Habitat for Humanity': {
@@ -337,6 +554,19 @@ var sites = {
 			will consist of painting, insulation, cabinetry, landscaping, and other home repair tasks.',
 		'url': 'http://www.momhelps.org/',
 		'image': 'images/sites/mom.jpg'
+	},
+
+	'Mission: Wolf': {
+		'city': 'Westcliffe',
+		'state': 'CO',
+		'site-description': 'Mission: Wolf is a remote wolf sanctuary nestled in Wet Mountain Valley of Custer County, Colorado. The \
+			solar-powered site is home to 38 wolves and wolfdog crosses with a goal to connect people with nature using hands-on \
+			experiential education. An on-site staff practices cooperative living while tending to the wolves and horses they nurture and protect.',
+		'activity-description': 'ASB has volunteered at Mission: Wolf several years and has helped feed and socialize animals, maintain grounds, \
+			build irrigation systems, garden and more. Volunteers live on-site alongside staff in an inclusive environment, providing full \
+			immersion and unforgettable experiences.',
+		'url': 'http://www.missionwolf.org/',
+		'image': 'images/sites/mission_wolf.jpg'
 	},
 
 	'Monroe Harding Home': {
@@ -378,6 +608,22 @@ var sites = {
 			participate in reflective activities, and assist with miscellaneous/general projects determined by the Volunteer Department.',
 		'url': 'https://www.operationbreakthrough.org/',
 		'image': 'images/sites/operation_breakthrough.png'
+	},
+
+	'Operation Food Search': {
+		'city': 'St. Louis',
+		'state': 'Missouri',
+		'site-description': 'Hunger is often found much closer to home and affects many more than we expect. It also often goes unnoticed \
+			as an issue that mainly affects the homeless and as one that is tackled by soup-kitchens and food pantries; however all across \
+			America, hunger is affecting families who were once middle-class. Specifically in St. Louis, Operation Food Search and the \
+			Bridge are two organizations that strive to attach the issue of hunger head on. Through both of these agencies, over 2 million \
+			people in the St. Louis area have been able to have food for themselves and their families. Uniquely, Operation Food Search works \
+			with local food pantries to provide them with the food that they in turn provide for their clients.',
+		'activity-description': 'Through these two sites, volunteers will learn how different organizations can utilize various methods to \
+			tackle the same issue. Volunteers will spend their mornings working at the Bridge, an organization that serves meals to those who \
+			are hungry. In the afternoons, volunteers will be at Operation Food Search organizing their large food warehouse.',
+		'url': 'http://www.operationfoodsearch.org/',
+		'image': 'images/sites/operation_food_search.jpg'
 	},
 
 	'Once Upon a Time in Appalachia': {
@@ -473,6 +719,19 @@ var sites = {
 		every day, allowing them to work outside and see all the Pittsburgh has to offer!',
 		'url': 'http://treepittsburgh.org/',
 		'image': 'images/sites/treepittsburgh.jpg'
+	},
+
+	'Whaley Children\'s Center': {
+		'city': 'Flint',
+		'state': 'Michigan',
+		'site-description': 'Whaley Children\'s Center is an organization that provides comprehensive services to families and \
+			children that have suffered from trauma and neglect. There is a large variety of programs offered, including residential \
+			care, clinical services, and schooling. Participants could participate in several projects at the center, such as \
+			building rehabilitation, painting murals, or working in the center\'s garden.', 
+		'activity-description': 'Because of the sensitive nature of Whaley\'s services, participants will not engage directly with \
+			children at the center. However, the group will have  opportunities to learn from staff about the issues that Whaley combats every day.', 
+		'url': 'http://www.whaleychildren.org/',
+		'image': 'images/sites/whaley_childrens_center.jpg'
 	}
 
 };
